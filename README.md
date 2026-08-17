@@ -10,7 +10,7 @@ Level1/  ~ Level5/   난이도별 문제 풀이
 
 문제 폴더 하나당:
 - `README.md` — 난이도, 유형, 접근법, 시간복잡도
-- `Solution.java` — 풀이 코드
+- `solution.c` — 풀이 코드
 
 ## 진행 상황
 
