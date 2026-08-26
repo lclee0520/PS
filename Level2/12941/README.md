@@ -1,7 +1,7 @@
 ## 최솟값 만들기
 
 - 문제번호: 12941
-- 난이도: Level 1
+- 난이도: Level 2
 - 유형: 그리디 (rearrangement inequality)
 
 ### 문제

@@ -16,6 +16,6 @@ Level1/  ~ Level5/   난이도별 문제 풀이
 
 | Level | 푼 문제 수 |
 |-------|-----------|
-| Level1 | 2 |
-| Level2 | 1 |
+| Level1 | 1 |
+| Level2 | 2 |
 | Level3 | 0 |
