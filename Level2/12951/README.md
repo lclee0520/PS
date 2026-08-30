@@ -19,3 +19,21 @@ O(n)
 "직전 글자가 공백인가"를 인덱스로 미리 보는 대신, "지금 새 단어의 시작인가"라는 상태(bool)를 들고 한 바퀴만 도는 방식으로 바꾸면:
 - 첫 글자를 따로 처리 안 해도 됨
 - `s[i+1]` 같은 한 칸 앞선 인덱스 접근이 없음
+
+```cpp
+string solution(string s) {
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+
+    bool newWord = true;
+    for (char &c : s) {
+        if (c == ' ') {
+            newWord = true;
+        } else if (newWord) {
+            c = toupper(c);
+            newWord = false;
+        }
+    }
+
+    return s;
+}
+```
