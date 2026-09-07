@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
 int solution(int n) {
     const int MOD = 1234567;
     vector<long long> v(n);

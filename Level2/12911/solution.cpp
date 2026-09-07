@@ -7,7 +7,7 @@ int toBeat(int n){
         s += '0' + n%2;
         n /= 2;
     }
-    cout << s <<'\n';
+    //cout << s <<'\n';
     return count(s.begin(),s.end(), '1');
 }
 
