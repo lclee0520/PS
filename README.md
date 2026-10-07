@@ -19,7 +19,7 @@ Contest/             대회 풀이
 |-------|-----------|
 | Level1 | 1 |
 | Level2 | 18 |
-| Level3 | 3 |
+| Level3 | 4 |
 | Level4 | 1 |
 
 ## 대회
