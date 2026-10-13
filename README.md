@@ -7,7 +7,7 @@
 ```
 Level1/  ~ Level5/   난이도별 문제 풀이
 Contest/             대회 풀이
-Algorithm/            알고리즘 수업 문제 예시
+Algorithm/           알고리즘 수업 문제 예시
 ```
 
 문제 폴더 하나당:
@@ -28,3 +28,10 @@ Algorithm/            알고리즘 수업 문제 예시
 | 대회 | 푼 문제 수 | 문제 |
 |------|-----------|------|
 | [숭고한](Contest/soonggohan/README.md) | 6 | A, B, C, D, E, H |
+
+
+##알고리즘
+
+| 문제 |
+| 8    |
+
