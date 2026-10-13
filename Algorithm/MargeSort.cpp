@@ -30,3 +30,24 @@ void mergesort2(int low, int high) {
 int main(){
     ;
 }
+
+void merge(int h, int m, const vector<int>& U, const vector<int>& V, vector<int>& S) {
+    int i = 0, j = 0, k = 0;
+    while (i < h && j < m) {                       // 둘 다 남아 있는 동안
+        if (U[i] < V[j]) S[k++] = U[i++];          // 작은 쪽을 S에 씀
+        else             S[k++] = V[j++];
+    }
+    while (i < h) S[k++] = U[i++];                 // U 나머지
+    while (j < m) S[k++] = V[j++];                 // V 나머지
+}
+
+void mergesort(int n, vector<int>& S) {
+    if (n > 1) {
+        int h = n / 2, m = n - h;                  // 앞 절반 h개 뒤 절반 m개
+        vector<int> U(S.begin(), S.begin() + h);   // S 앞 절반을 U로 복사
+        vector<int> V(S.begin() + h, S.end());     // S 뒤 절반을 V로 복사
+        mergesort(h, U);                           // U 정렬
+        mergesort(m, V);                           // V 정렬
+        merge(h, m, U, V, S);                      // 둘을 합쳐 S에 덮어씀
+    }
+}

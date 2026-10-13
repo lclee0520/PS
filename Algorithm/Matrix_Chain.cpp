@@ -22,17 +22,20 @@ int solution(vector<vector<int>> matrix_sizes) {
         }
     }
 
-    for(int i = num - 1; i >= 0; i--){ 
-        for(int j = 0; j < num; j++){
-            for(int k = i; k < j; k++){
-                int cost = v[i][k] + v[k+1][j] + matrix_sizes[i][0] * matrix_sizes[k][1] * matrix_sizes[j][1];
-                if(cost < v[i][j]){
-                    v[i][j] = cost;
+    for (int d = 1; d < num; d++) {
+        for (int i = 0; i + d < num; i++) {                 // ① j가 범위 안에
+            int j = i + d, min_num = INT_MAX;                // ② 처음엔 무한대
+            for (int k = i; k < j; k++) {                    // ③ k는 i부터
+                int cost = v[i][k] + v[k + 1][j] + matrix_sizes[i][0] * matrix_sizes[k][1] * matrix_sizes[j][1];  // ④ 곱
+                if (cost < min_num) {
+                    min_num = cost;                          // ⑤ 최솟값 갱신
                     pos[i][j] = k;
                 }
             }
+            v[i][j] = min_num;                               // ⑤ 표에 저장
         }
     }
+
     cout << order(pos, 0, num - 1);
     return v[0][num - 1];
 }

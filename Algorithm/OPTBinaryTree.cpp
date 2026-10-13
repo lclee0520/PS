@@ -23,7 +23,7 @@ void optsearchtree() {
     A[n + 1][n] = 0; R[n + 1][n] = 0;              // k = n일 때 오른쪽 빈 트리
 
     for (int diagonal = 1; diagonal <= n - 1; diagonal++)
-        for (int i = 1; i <= n - diagonal; i++) {
+        for (int i = 1; i + diagonal <= n; i++) {
             int j = i + diagonal;
             double sum = 0;
             for (int m = i; m <= j; m++) sum += p[m];   // p_i + ... + p_j
@@ -31,7 +31,10 @@ void optsearchtree() {
             A[i][j] = DBL_MAX;
             for (int k = i; k <= j; k++) {              // k를 루트로 시도
                 double cost = A[i][k - 1] + A[k + 1][j];
-                if (cost < A[i][j]) { A[i][j] = cost; R[i][j] = k; }
+                if (cost < A[i][j]) { 
+                    A[i][j] = cost;
+                    R[i][j] = k; 
+                }
             }
             A[i][j] += sum;                             // 확률 합은 min 밖에서 더함
         }
