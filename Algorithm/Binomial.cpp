@@ -12,8 +12,7 @@ long long bin2(int n, int k) {                         // 동적계획 2차원 �
     vector<vector<long long>> B(n + 1, vector<long long>(k + 1));
     for (int i = 0; i <= n; i++)
         for (int j = 0; j <= min(i, k); j++)
-            if (j == 0 || j == i) B[i][j] = 1;
-            else B[i][j] = B[i - 1][j - 1] + B[i - 1][j];
+            B[i][j] = (j == 0 || i == j) ? 1 : B[i - 1][j - 1] + B[i - 1][j];
     return B[n][k];
 }
 
