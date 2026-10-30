@@ -23,6 +23,7 @@ LeetCode/            리트코드 문제 풀이
 | Level2 | 18 |
 | Level3 | 4 |
 | Level4 | 1 |
+| LeetCode | 2 |
 
 ## 대회
 
